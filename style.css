@@ -59,9 +59,10 @@ background: black;
 transform: translateY(100px) rotateX(-90deg);
 }
 
-.slider-container {
+.slider-continer {
     position: absolute;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
+    padding: 20px
 }
