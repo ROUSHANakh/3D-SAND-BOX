@@ -1,0 +1,67 @@
+
+:root {
+    --background-color: #336699;
+    --text-color: #fff;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.cube {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+.container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transition: transform 0.1s 
+    ease-out;
+}
+.sides {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.8);
+    border: 1px solid #333;
+}
+.sides.front {
+    background: rgba(120, 200, 255, 0.5);
+    transform: translateZ(100px);
+}
+.sides.back {
+    background: rgba(255, 200, 100, 0.5);
+    transform: translateZ(-100px) rotateY(180deg);
+}
+.sides.left {
+    background: rgba(30, 200, 100, 0.5);
+    transform: translateX(-100px) rotateY(90deg);
+}
+.sides.right{
+    background: rgba(30, 200, 100,0.5);
+    transform: translateX(100px) rotateY(-90deg);
+}
+.sides.top {
+    background: rgba(255, 200, 100, 0.5);
+    transform: translateY(-100px) rotateX(90deg);
+}
+.sides.down {
+background: black;
+transform: translateY(100px) rotateX(-90deg);
+}
+
+.slider-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
